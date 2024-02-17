@@ -30,8 +30,6 @@ public static class Calculator
 
     public static bool IsCorrectFormat(string expression)
     {
-        if (string.IsNullOrEmpty(expression) || expression.EndsWith(' ')) return false;
-
-        return true;
+        return !string.IsNullOrEmpty(expression) && !expression.EndsWith(' ');
     }
 }
