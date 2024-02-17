@@ -15,6 +15,7 @@ public partial class CalculatorApp : Form
         char digit = digitButton.Text[0];
 
         if (digit.Equals('0')) ResultLabel.Text = Calculator.TryAddDigitToExpression(ResultLabel.Text);
+
         else ResultLabel.Text = Calculator.TryAddDigitToExpression(ResultLabel.Text, digit);
     }
 
@@ -30,7 +31,7 @@ public partial class CalculatorApp : Form
     {
         if (Calculator.IsCorrectFormat(ResultLabel.Text))
         {
-            ExpressionLabel.Text = ResultLabel.Text + " =";
+            ExpressionLabel.Text = $"{ResultLabel.Text} =";
             ResultLabel.Text = Calculator.Calculate(ResultLabel.Text.Replace("X", "*"));
         }
     }
