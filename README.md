@@ -1,3 +1,5 @@
 # CalculatorApp
 
-Such empty, for now.
+```C#
+throw new NotImplementedException();
+```
